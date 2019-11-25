@@ -93,6 +93,7 @@ int	get_line(int fd, char **s, char **line)
 	*line = ft_substr(s[fd], 0, i);
 	if (s[fd][i] == '\0')
 	{
+		*line = s[fd];
 		free(s[fd]);
 		return (0);
 	}
