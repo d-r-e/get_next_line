@@ -46,7 +46,7 @@ int			get_next_line(int fd, char **line)
 	int			rd;
 	char		*temp;
 
-	if (!line || fd < 1 || fd > 4095 || (rd = read(fd, buff, 0)) == -1
+	if (!line || fd < 0 || fd > 4095 || (rd = read(fd, buff, 0)) == -1
 			|| BUFFER_SIZE < 1)
 		return (-1);
 	while ((rd = read(fd, buff, BUFFER_SIZE)) > 0)
